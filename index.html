@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <script>
         tailwind.config = {
             theme: {
@@ -45,6 +46,7 @@
             }
         }
     </script>
+    
     <style>
         .pink-hero-gradient {
             background: linear-gradient(135deg, #fff0f5 0%, #ffe4ed 50%, #fecddc 100%);
@@ -54,6 +56,12 @@
         }
         .pink-card-glow {
             box-shadow: 0 10px 30px -5px rgba(244, 63, 119, 0.25);
+        }
+        .gallery-item {
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .gallery-item:hover {
+            transform: translateY(-6px);
         }
     </style>
 </head>
@@ -74,13 +82,14 @@
                 <a href="#about" class="text-stone-700 hover:text-pinky-600 transition-colors">About</a>
                 <a href="#atmosphere" class="text-stone-700 hover:text-pinky-600 transition-colors">Atmosphere</a>
                 <a href="#services" class="text-stone-700 hover:text-pinky-600 transition-colors">Menu & Services</a>
+                <a href="#gallery" class="text-stone-700 hover:text-pinky-600 transition-colors">Gallery</a>
                 <a href="#contact" class="text-stone-700 hover:text-pinky-600 transition-colors">Contact</a>
             </nav>
 
-            <!-- CTA Button -->
+            <!-- Direct Call Link -->
             <div class="hidden md:block">
-                <a href="#booking" class="bg-gradient-to-r from-pinky-500 to-neon-pink hover:from-pinky-600 hover:to-pinky-700 text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all shadow-md hover:shadow-pinky-300/60 transform hover:-translate-y-0.5">
-                    Book Appointment
+                <a href="tel:5415007056" class="bg-gradient-to-r from-pinky-500 to-neon-pink hover:from-pinky-600 hover:to-pinky-700 text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all shadow-md hover:shadow-pinky-300/60 transform hover:-translate-y-0.5 inline-flex items-center gap-2">
+                    <i class="fa-solid fa-phone text-xs"></i> 541-500-7056
                 </a>
             </div>
 
@@ -96,10 +105,11 @@
             <a href="#about" class="block text-stone-800 font-medium hover:text-pinky-600 mobile-link">About</a>
             <a href="#atmosphere" class="block text-stone-800 font-medium hover:text-pinky-600 mobile-link">Atmosphere</a>
             <a href="#services" class="block text-stone-800 font-medium hover:text-pinky-600 mobile-link">Menu & Services</a>
+            <a href="#gallery" class="block text-stone-800 font-medium hover:text-pinky-600 mobile-link">Gallery</a>
             <a href="#contact" class="block text-stone-800 font-medium hover:text-pinky-600 mobile-link">Contact</a>
             <div class="pt-2">
-                <a href="#booking" class="block text-center bg-gradient-to-r from-pinky-500 to-neon-pink text-white px-6 py-3 rounded-full text-sm font-semibold shadow-md mobile-link">
-                    Book Appointment
+                <a href="tel:5415007056" class="block text-center bg-gradient-to-r from-pinky-500 to-neon-pink text-white px-6 py-3 rounded-full text-sm font-semibold shadow-md mobile-link">
+                    <i class="fa-solid fa-phone text-xs mr-2"></i> Call 541-500-7056
                 </a>
             </div>
         </div>
@@ -120,7 +130,9 @@
                     </p>
 
                     <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
-                        
+                        <a href="tel:5415007056" class="w-full sm:w-auto bg-gradient-to-r from-pinky-500 via-neon-pink to-pinky-600 hover:from-pinky-600 hover:to-pinky-700 text-white px-8 py-3.5 rounded-full text-base font-semibold transition-all shadow-lg shadow-pinky-400/40 text-center transform hover:-translate-y-0.5 inline-flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-phone"></i> Call 541-500-7056
+                        </a>
                         <a href="#services" class="w-full sm:w-auto bg-white hover:bg-pinky-50 text-pinky-900 border border-pinky-300 px-8 py-3.5 rounded-full text-base font-semibold transition-all shadow-sm text-center">
                             View Menu & Pricing
                         </a>
@@ -140,7 +152,7 @@
                         <div class="absolute -inset-4 bg-gradient-to-tr from-neon-pink to-pinky-400 rounded-3xl opacity-50 blur-xl -z-10 animate-pulse"></div>
                         <div class="relative bg-white p-3.5 rounded-3xl shadow-2xl border-2 border-pinky-200 transform rotate-1 hover:rotate-0 transition-transform duration-500">
                             <!-- TODO QWERTY -->
-                            <img src="843023787_1629639271932698_2289611021060001259_n.jpg" alt="Hair transformation with extensions by Carrielynn" class="w-full h-[460px] object-cover rounded-2xl shadow-inner" onerror="this.src='file-0.png';">
+                            <img src="843023787_1629639271932698_2289611021060001259_n.jpg" alt="Hair transformation with extensions by Carrielynn" class="w-full h-[460px] object-cover rounded-2xl shadow-inner cursor-pointer" onclick="openLightbox('file-1.png', 'Signature Extentions Work')" onerror="this.src='file-0.png';">
                             <div class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md p-4 rounded-xl shadow-lg border border-pinky-200 flex items-center justify-between">
                                 <div>
                                     <p class="text-xs text-pinky-600 font-bold uppercase tracking-wider">Signature Work</p>
@@ -169,7 +181,7 @@
                     <div>
                         <span class="text-xs uppercase tracking-widest text-pinky-700 font-bold">Studio Vibe & Comfort</span>
                         <h3 class="font-serif text-2xl sm:text-3xl font-bold text-charcoal-900 mt-0.5">
-                            Feel at home, in a cozy no fluorescent-lighting atmosphere.
+                            Feel at home, in a cozy no florescent-lighting atmosphere.
                         </h3>
                         <p class="text-pinky-950/80 text-sm sm:text-base mt-1 font-light">
                             Relax and unwind in a calm, ambient studio setting designed for total relaxation without harsh commercial overhead lights.
@@ -177,8 +189,8 @@
                     </div>
                 </div>
                 <div class="shrink-0">
-                    <a href="#booking" class="bg-pinky-900 hover:bg-black text-white px-6 py-3 rounded-full text-sm font-semibold transition-all shadow-md">
-                        Experience the Studio
+                    <a href="tel:5415007056" class="bg-pinky-900 hover:bg-black text-white px-6 py-3 rounded-full text-sm font-semibold transition-all shadow-md inline-flex items-center gap-2">
+                        <i class="fa-solid fa-phone text-xs"></i> Connect Directly
                     </a>
                 </div>
             </div>
@@ -192,7 +204,7 @@
                     <div class="relative">
                         <div class="absolute -inset-4 bg-pinky-200 rounded-3xl -z-10 transform -rotate-2"></div>
                         <!-- TODO QWERTY -->
-                        <img src="28870899_1936415376674137_8847551317439152128_n.jpg" alt="" class="w-full h-[420px] object-cover rounded-2xl shadow-lg border-2 border-pinky-100" onerror="this.src='file-0.png';">
+                        <img src="28870899_1936415376674137_8847551317439152128_n.jpg" alt="Carrielynn Katana Myers" class="w-full h-[420px] object-cover rounded-2xl shadow-lg border-2 border-pinky-100 cursor-pointer" onclick="openLightbox('file-1.png', 'Carrielynn Katana Myers')" onerror="this.src='file-0.png';">
                         <div class="absolute -bottom-6 -right-6 bg-gradient-to-br from-pinky-600 to-neon-pink text-white p-6 rounded-2xl shadow-xl hidden sm:block max-w-xs border border-pinky-400">
                             <p class="font-serif italic text-lg leading-snug">"Hair isn't just an art form, it's a deeply personal expression of self."</p>
                             <p class="text-xs font-bold uppercase tracking-wider mt-2 opacity-90">— Carrielynn Katana Myers</p>
@@ -211,7 +223,7 @@
                         Hello! I'm Carrielynn Katana Myers, the owner and lead hair artist behind Hair by Carrielynn. Serving clients with dedication since 2002, my mission is to provide an inviting, peaceful studio where you can completely unwind.
                     </p>
                     <p class="text-pinky-900 font-medium leading-relaxed">
-                        <strong>Feel at home, in a cozy no fluorescent-lighting atmosphere.</strong> Enjoy one-on-one attention in a studio illuminated with calm, warm lighting for a peaceful experience every time you sit in my chair.
+                        <strong>Feel at home, in a cozy no florescent-lighting atmosphere.</strong> Enjoy one-on-one attention in a studio illuminated with calm, warm lighting for a peaceful experience every time you sit in my chair.
                     </p>
 
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
@@ -394,75 +406,165 @@
         </div>
     </section>
 
-    <section id="booking" class="py-20 md:py-32 bg-white relative">
+    <section id="gallery" class="py-20 md:py-28 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <div class="inline-flex items-center gap-2 bg-pinky-100 text-pinky-800 px-4 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase border border-pinky-300">
+                    <i class="fa-solid fa-camera text-pinky-600"></i> Studio Gallery
+                </div>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-charcoal-900">Work Showcase</h2>
+                <p class="text-stone-600 font-light">Explore recent transformations, dimension color highlights, and styling artistry by Carrielynn.</p>
+                <div class="w-20 h-1 bg-gradient-to-r from-pinky-400 via-neon-pink to-pinky-600 mx-auto rounded-full mt-2"></div>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <!-- Left: Info -->
-                <div class="lg:col-span-5 space-y-8">
-                    <div class="space-y-4">
-                        <div class="inline-flex items-center gap-2 bg-pinky-100 text-pinky-800 px-4 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase border border-pinky-300">
-                            Get in Touch
-                        </div>
-                        
-
-                    <div class="space-y-6">
-                        <div class="flex items-start gap-4">
-                            <div class="bg-pinky-100 text-pinky-600 w-12 h-12 rounded-xl flex items-center justify-center shrink-0 border border-pinky-200">
-                                <i class="fa-solid fa-phone text-lg"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-charcoal-900">Direct Phone</h4>
-                                <p class="text-stone-600 text-sm mt-1">
-                                    <a href="tel:5415007056" class="hover:text-pinky-600 transition-colors font-semibold text-base">541-500-7056</a>
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start gap-4">
-                            <div class="bg-pinky-100 text-pinky-600 w-12 h-12 rounded-xl flex items-center justify-center shrink-0 border border-pinky-200">
-                                <i class="fa-solid fa-envelope text-lg"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-charcoal-900">Email Address</h4>
-                                <p class="text-stone-600 text-sm mt-1">
-                                    <a href="mailto:carrielynnkatana@gmail.com" class="hover:text-pinky-600 transition-colors font-semibold">carrielynnkatana@gmail.com</a>
-                                </p>
-                            </div>
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item group relative bg-white rounded-2xl overflow-hidden border-2 border-pinky-200 shadow-md hover:shadow-xl cursor-pointer" onclick="openLightbox('843023787_1629639271932698_2289611021060001259_n.jpg', 'Extentions & Crimson Dimensions')">
+                    <div class="relative h-80 overflow-hidden bg-pinky-100">
+                        <!-- TODO QWERTY -->
+                        <img src="843023787_1629639271932698_2289611021060001259_n.jpg" alt="Extentions Work by Carrielynn" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onerror="this.src='https://placehold.co/600x800/ffe4ed/851235?text=Extensions';">
+                        <div class="absolute inset-0 bg-gradient-to-t from-pinky-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <span class="text-white text-sm font-semibold flex items-center gap-2">
+                                <i class="fa-solid fa-expand text-pinky-300"></i> View Photo
+                            </span>
                         </div>
                     </div>
-
-                    <!-- Social Media Links -->
-                    <div class="pt-4">
-                        <p class="text-xs uppercase tracking-wider text-pinky-800 font-bold mb-3">Connect With Carrielynn</p>
-                        <div class="flex gap-3">
-                            <a href="#" class="w-10 h-10 rounded-full bg-pinky-100 hover:bg-pinky-500 hover:text-white text-pinky-800 flex items-center justify-center transition-colors">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
-                            <a href="#" class="w-10 h-10 rounded-full bg-pinky-100 hover:bg-pinky-500 hover:text-white text-pinky-800 flex items-center justify-center transition-colors">
-                                <i class="fa-brands fa-facebook-f"></i>
-                            </a>
-                            <a href="#" class="w-10 h-10 rounded-full bg-pinky-100 hover:bg-pinky-500 hover:text-white text-pinky-800 flex items-center justify-center transition-colors">
-                                <i class="fa-brands fa-tiktok"></i>
-                            </a>
-                            <a href="#" class="w-10 h-10 rounded-full bg-pinky-100 hover:bg-pinky-500 hover:text-white text-pinky-800 flex items-center justify-center transition-colors">
-                                <i class="fa-brands fa-pinterest-p"></i>
-                            </a>
-                        </div>
+                    <div class="p-4 bg-white border-t border-pinky-100 flex items-center justify-between">
+                        <span class="font-bold text-charcoal-900 text-sm">Extentions</span>
+                        <span class="text-xs bg-pinky-100 text-pinky-800 px-2.5 py-1 rounded-full font-semibold">Signature</span>
                     </div>
                 </div>
 
-                <!-- Right: Interactive Booking Form -->
-                <div id="contact" class="lg:col-span-7 bg-pinky-50/50 p-8 sm:p-10 rounded-3xl border-2 border-pinky-200 shadow-md relative">
-                    
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item group relative bg-white rounded-2xl overflow-hidden border-2 border-pinky-200 shadow-md hover:shadow-xl cursor-pointer" onclick="openLightbox('Unknown-2.jpg', 'Dimensional Color')">
+                    <div class="relative h-80 overflow-hidden bg-pinky-100">
+                        <!-- TODO QWERTY -->
+                        <img src="Unknown-2.jpg" alt="Dimensional Color" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-pinky-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <span class="text-white text-sm font-semibold flex items-center gap-2">
+                                <i class="fa-solid fa-expand text-pinky-300"></i> View Photo
+                            </span>
                         </div>
-
-                        
-                        
-                        </div>
-
-                    
                     </div>
+                    <div class="p-4 bg-white border-t border-pinky-100 flex items-center justify-between">
+                        <span class="font-bold text-charcoal-900 text-sm">Dimensional Color</span>
+                        <span class="text-xs bg-pinky-100 text-pinky-800 px-2.5 py-1 rounded-full font-semibold">Color</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item group relative bg-white rounded-2xl overflow-hidden border-2 border-pinky-200 shadow-md hover:shadow-xl cursor-pointer" onclick="openLightbox('Unknown.png', 'Specialty Styles')">
+                    <div class="relative h-80 overflow-hidden bg-pinky-100">
+                        <!-- TODO QWERTY -->
+                        <img src="Unknown.png" alt="Specialty Styles" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-pinky-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <span class="text-white text-sm font-semibold flex items-center gap-2">
+                                <i class="fa-solid fa-expand text-pinky-300"></i> View Photo
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-white border-t border-pinky-100 flex items-center justify-between">
+                        <span class="font-bold text-charcoal-900 text-sm">Specialty Styles</span>
+                        <span class="text-xs bg-pinky-100 text-pinky-800 px-2.5 py-1 rounded-full font-semibold">Styling</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="gallery-item group relative bg-white rounded-2xl overflow-hidden border-2 border-pinky-200 shadow-md hover:shadow-xl cursor-pointer" onclick="openLightbox('4665f86f-d4d5-443b-aba6-7f1f6b0079fd.png', 'Warm Tones')">
+                    <div class="relative h-80 overflow-hidden bg-pinky-100">
+                        <!-- TODO QWERTY -->
+                        <img src="4665f86f-d4d5-443b-aba6-7f1f6b0079fd.png" alt="Warm Tones" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-pinky-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <span class="text-white text-sm font-semibold flex items-center gap-2">
+                                <i class="fa-solid fa-expand text-pinky-300"></i> View Photo
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-white border-t border-pinky-100 flex items-center justify-between">
+                        <span class="font-bold text-charcoal-900 text-sm">Warm Tones</span>
+                        <span class="text-xs bg-pinky-100 text-pinky-800 px-2.5 py-1 rounded-full font-semibold">Balayage</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="gallery-item group relative bg-white rounded-2xl overflow-hidden border-2 border-pinky-200 shadow-md hover:shadow-xl cursor-pointer" onclick="openLightbox('28744950-25f3-4db3-a5ca-183f509b0207.jpeg', 'Vibrant Highlights')">
+                    <div class="relative h-80 overflow-hidden bg-pinky-100">
+                        <!-- TODO QWERTY -->
+                        <img src="28744950-25f3-4db3-a5ca-183f509b0207.jpeg" alt="Vibrant Highlights" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-pinky-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <span class="text-white text-sm font-semibold flex items-center gap-2">
+                                <i class="fa-solid fa-expand text-pinky-300"></i> View Photo
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-white border-t border-pinky-100 flex items-center justify-between">
+                        <span class="font-bold text-charcoal-900 text-sm">Vibrant Highlights</span>
+                        <span class="text-xs bg-pinky-100 text-pinky-800 px-2.5 py-1 rounded-full font-semibold">Highlights</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="gallery-item group relative bg-white rounded-2xl overflow-hidden border-2 border-pinky-200 shadow-md hover:shadow-xl cursor-pointer" onclick="openLightbox('71815289_2319422728373398_8974236789493465088_n.jpg', 'Precision Cuts')">
+                    <div class="relative h-80 overflow-hidden bg-pinky-100">
+                        <!-- TODO QWERTY -->
+                        <img src="71815289_2319422728373398_8974236789493465088_n.jpg" alt="Precision Cuts" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-pinky-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <span class="text-white text-sm font-semibold flex items-center gap-2">
+                                <i class="fa-solid fa-expand text-pinky-300"></i> View Photo
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-white border-t border-pinky-100 flex items-center justify-between">
+                        <span class="font-bold text-charcoal-900 text-sm">Therapy Dog Upon Request</span>
+                        <span class="text-xs bg-pinky-100 text-pinky-800 px-2.5 py-1 rounded-full font-semibold">Cutting</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 md:py-28 bg-pinky-50/70 border-t border-pinky-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl p-8 sm:p-12 border-2 border-pinky-200 shadow-xl text-center space-y-8">
+                
+                <div class="space-y-3">
+                    <div class="inline-flex items-center gap-2 bg-pinky-100 text-pinky-800 px-4 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase border border-pinky-300">
+                        Get In Touch
+                    </div>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-charcoal-900">Contact Carrielynn</h2>
+                    <p class="text-stone-600 font-light max-w-lg mx-auto">
+                        Connect directly via call, text message, or email to discuss services or inquire about appointment availability.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
+                    <a href="tel:5415007056" class="p-6 rounded-2xl bg-gradient-to-br from-pinky-50 to-pinky-100/60 border border-pinky-200 hover:border-pinky-400 transition-all group text-center space-y-3 shadow-sm hover:shadow-md">
+                        <div class="w-12 h-12 bg-pinky-500 text-white rounded-full flex items-center justify-center mx-auto text-xl group-hover:scale-110 transition-transform shadow">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs text-pinky-800 font-bold uppercase tracking-wider block">Call or Text</span>
+                            <span class="text-xl font-bold text-charcoal-900 group-hover:text-pinky-600 transition-colors">541-500-7056</span>
+                        </div>
+                    </a>
+
+                    <a href="mailto:carrielynnkatana@gmail.com" class="p-6 rounded-2xl bg-gradient-to-br from-pinky-50 to-pinky-100/60 border border-pinky-200 hover:border-pinky-400 transition-all group text-center space-y-3 shadow-sm hover:shadow-md">
+                        <div class="w-12 h-12 bg-pinky-500 text-white rounded-full flex items-center justify-center mx-auto text-xl group-hover:scale-110 transition-transform shadow">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs text-pinky-800 font-bold uppercase tracking-wider block">Send Email</span>
+                            <span class="text-base sm:text-lg font-bold text-charcoal-900 group-hover:text-pinky-600 transition-colors break-all">carrielynnkatana@gmail.com</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="pt-4 border-t border-pinky-100 flex flex-wrap items-center justify-center gap-6 text-stone-600 text-sm">
+                    <span class="flex items-center gap-2"><i class="fa-solid fa-sparkles text-pinky-500"></i> Carrielynn Katana Myers</span>
+                    <span class="flex items-center gap-2"><i class="fa-solid fa-heart text-pinky-500"></i> Operating Since 2002</span>
                 </div>
 
             </div>
@@ -478,18 +580,19 @@
                     </span>
                     <p class="text-xs text-pinky-300 font-semibold tracking-wider uppercase">Carrielynn Katana Myers</p>
                     <p class="text-xs text-stone-300 leading-relaxed pt-2">
-                        Private boutique hair salon space. Feel right at home in a cozy, no fluorescent-lighting atmosphere.
+                        Private boutique hair salon space. Feel right at home in a cozy, no florescent-lighting atmosphere.
                     </p>
                 </div>
 
                 <div>
-                    <h4 class="text-white text-sm font-bold uppercase tracking-wider mb-4">Quick Links</h4>
+                    <h4 class="text-white text-sm font-bold uppercase tracking-wider mb-4">Navigation</h4>
                     <ul class="space-y-2 text-sm text-stone-300">
                         <li><a href="#home" class="hover:text-pinky-400 transition-colors">Home</a></li>
                         <li><a href="#about" class="hover:text-pinky-400 transition-colors">About Carrielynn</a></li>
                         <li><a href="#atmosphere" class="hover:text-pinky-400 transition-colors">Atmosphere</a></li>
                         <li><a href="#services" class="hover:text-pinky-400 transition-colors">Services & Menu</a></li>
-                       
+                        <li><a href="#gallery" class="hover:text-pinky-400 transition-colors">Gallery</a></li>
+                        <li><a href="#contact" class="hover:text-pinky-400 transition-colors">Contact</a></li>
                     </ul>
                 </div>
 
@@ -502,7 +605,7 @@
                         </li>
                         <li class="flex items-center gap-2">
                             <i class="fa-solid fa-envelope text-pinky-400"></i>
-                            <a href="mailto:carrielynnkatana@gmail.com" class="hover:text-white transition-colors">carrielynnkatana@gmail.com</a>
+                            <a href="mailto:carrielynnkatana@gmail.com" class="hover:text-white transition-colors break-all">carrielynnkatana@gmail.com</a>
                         </li>
                     </ul>
                 </div>
@@ -511,12 +614,24 @@
             <div class="pt-8 border-t border-stone-800 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-400">
                 <p>&copy; 2026 Hair by Carrielynn (Carrielynn Katana Myers). All rights reserved.</p>
                 <div class="flex space-x-6 mt-4 sm:mt-0">
-                    <a href="#" class="hover:text-stone-200 transition-colors">Privacy Policy</a>
-                    <a href="#" class="hover:text-stone-200 transition-colors">Terms of Service</a>
+                    <span>Since 2002</span>
                 </div>
             </div>
         </div>
     </footer>
+
+    <div id="lightbox" class="fixed inset-0 z-50 bg-black/90 hidden backdrop-blur-md flex items-center justify-center p-4" onclick="closeLightbox()">
+        <div class="relative max-w-4xl max-h-[90vh] w-full flex flex-col items-center justify-center" onclick="event.stopPropagation()">
+            <button onclick="closeLightbox()" class="absolute -top-12 right-0 text-white hover:text-pinky-400 text-2xl p-2 focus:outline-none">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="bg-white p-2 rounded-2xl shadow-2xl border border-pinky-300 max-h-[80vh] overflow-hidden">
+                <!-- TODO QWERTY -->
+                <img id="lightbox-img" src="" alt="Gallery Preview" class="max-h-[75vh] w-auto object-contain rounded-xl">
+            </div>
+            <p id="lightbox-caption" class="text-white font-serif italic mt-4 text-center text-lg"></p>
+        </div>
+    </div>
 
     <script>
         // Mobile Menu Toggle
@@ -544,7 +659,27 @@
             }
         });
 
-       
+        // Gallery Lightbox Logic
+        function openLightbox(src, caption) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+
+            lightboxImg.src = src;
+            lightboxCaption.textContent = caption || '';
+            lightbox.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightbox();
+        });
     </script>
 </body>
 </html>
